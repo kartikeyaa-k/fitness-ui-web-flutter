@@ -1,13 +1,3 @@
-# Getting Started with Create React App
+# metrics-bubble-web
+https://user-images.githubusercontent.com/67781046/155622876-5a51bfd1-edff-43e8-9a42-a38f47f4cc76.mp4
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
