@@ -1,0 +1,78 @@
+#customize_workout {
+    height: 134vh;
+    padding-top: 2rem;
+
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    width: 90%;
+    position: relative;
+    align-items: center;
+}
+
+.profile__me {
+    height: auto;
+}
+
+.form__container {
+    width: 14rem;
+    height: 10rem;
+    left: calc(50% - 6rem);
+    position: relative;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+    display: flex;
+}
+
+.input-form-field {
+    padding: 10px 20px;
+    line-height: 28px;
+    border-radius: 2rem;
+    margin: 3%;
+    width: 90%;
+}
+
+.btn {
+    width: max-content;
+    display: block;
+    background: var(--color-btn);
+    color: var(--color-bg);
+    padding: 0.85rem 1.2rem;
+    cursor: pointer;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+.btn:hover {
+    background: linear-gradient(112.94deg, #11DDC4 0%, #2B74FF 82.05%);
+}
+
+
+
+
+
+/* Media Queries (Medium Devices)  */
+@media screen and (max-width: 1024px) {
+    #customize_workout {
+        height: 100vh;
+        padding-top: 2rem;
+
+    }
+}
+
+/* Media Queries (Small Devices) */
+@media screen and (max-width: 600px) {
+    #customize_workout {
+        height: 166vh;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-height: 600px) {
+    #customize_workout {
+        height: 166vh;
+        padding-top: 2rem;
+    }
+}

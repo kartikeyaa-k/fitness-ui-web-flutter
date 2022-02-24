@@ -1,0 +1,15 @@
+#summary {
+  height: 100vh;
+  padding-top: 2rem;
+}
+
+/* Media Queries (Medium Devices) */
+@media screen and (max-width: 1024px) {}
+
+/* Media Queries (Small Devices) */
+@media screen and (max-width: 600px) {
+  #summary {
+    height: 110vh;
+    padding-top: 2rem;
+  }
+}

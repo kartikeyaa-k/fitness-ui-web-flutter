@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import './index.css';
+import Nav from './components/nav/Nav';
+import Header from './components/header/Header';
+import Summary from './components/summary/Summary';
+import CustomizeWorkouts from './components/customize_workouts/CustomizeWorkouts';
+
 
 function App() {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true)
+
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {
+        loading ? <div id='splashScreen'></div> :
+          <>
+            <Header />
+            <Nav />
+            <Summary />
+            <CustomizeWorkouts />
+          </>
+      }
+    </>
   );
 }
 

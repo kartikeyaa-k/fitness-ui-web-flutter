@@ -1,13 +1,224 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'GT-Expanded-Reg';
+  src: url(./fonts/gt/GT-America-Regular.ttf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'GT-Expanded-Med';
+  src: url(./fonts/gt/GT-America-Expanded-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'GT-Expanded-Bold';
+  src: url(./fonts/gt/GT-America-Expanded-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'LeagueGothic-Regular';
+  src: url(./fonts/league_gothic/LeagueGothic-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Helvetica-Bold';
+  src: url(./fonts/helvetica/Helvetica-bold.ttf);
+}
+
+@font-face {
+  font-family: 'Helvetica-Reg';
+  src: url(./fonts/helvetica/Helvetica.ttf);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --color-bg: black;
+  --color-bg-variant: #c4c4c4;
+  --color-primary: #fff;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+  --color-btn: #11ddc4;
+  --transition: all 200ms ease-in;
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-ms: 90%;
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "GT-Expanded-Reg", "Helvetica Neue", Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.15;
+  font-size: 1.8rem;
+  letter-spacing: .1rem;
+
+}
+
+/* General Styles */
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+
+}
+
+
+
+#splashScreen{
+  position:relative;
+  height:300px;
+  width:400px;
+  left: calc(50% - 150px);
+  top : 40vh;
+  background-image :url('./assets/tonal-logo.png');
+  background-repeat: no-repeat;;
+}
+
+h1, h2 {
+  font-family: "GT-Expanded-Reg", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.095;
+  letter-spacing: 0.1rem;
+  font-size: 4.4rem;
+
+}
+
+/* h3 for sub-headers found in light grey*/
+h3 {
+  font-family: "GT-Expanded-Reg", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.278;
+  color: var(--color-bg-variant)
+}
+
+
+/* Solid Titles*/
+h4 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0px;
+  line-height: 1.07;
+}
+
+/* Random Content, example : Digits*/
+h5 {
+  font-family: "GT-Expanded-Reg", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.095;
+  letter-spacing: -0.0rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+
+}
+
+/* Basic Text */
+span {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.095;
+  letter-spacing: -0.0rem;
+  font-size: 0.7rem;
+  color: var(--color-bg-variant);
+  margin-top: 1%;
+  line-height: 2.02;
+}
+
+section {
+  margin-top: 2rem;
+  height: 100vh;
+}
+
+section>h2, section>h5 {
+  text-align: center;
+  color: var(--color-light);
+}
+
+section>h2 {
+  color: var(--color-primary);
+  margin-bottom: 3rem;
+}
+
+.text-light {
+  color: var(--color-light);
+}
+
+a {
+  color: var(--color-primary);
+  transition: var(--transitioon);
+}
+
+a.hover {
+  color: var(--color-white);
+}
+
+.btn {
+  width: max-content;
+  display: block;
+  color: var(--color-primary);
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+  transition: var(--transitioon);
+}
+
+.btn:hover {
+  background: linear-gradient(112.94deg, #11DDC4 0%, #2B74FF 82.05%);
+}
+
+.btn:hover {
+  background: var(--color-white);
+  color: var(--color-bg);
+  border-color: transparent;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+/* Media Queries (Medium Devices) */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+
+
+  }
+
+  section {
+    margin-top: 6rem;
+  }
+}
+
+/* Media Queries (Small Devices) */
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+
+  }
+
+  section>h2 {
+    margin-bottom: 2rem;
+  }
 }
